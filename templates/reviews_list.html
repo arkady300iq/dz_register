@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Reviews </title>
+    </head>
+    <body>
+        <h1>Reviews:</h1>
+        {% for review in reviews %}
+        <p>Title: {{ review.title }}</p>
+        <p>Content: {{ review.content }}</p>
+        <p>Author: {{ review.author }}</p>
+        <p>Date: {{ review.pub_date}}</p>
+        <br>
+        {% endfor %}
+        <a href="{% url 'create_review' %}">Add a Review</a>
+    </body>
+</html>
+
